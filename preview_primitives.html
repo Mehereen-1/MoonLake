@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MoonLake Geometric Primitives - Illustration Previews</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #f4f6f9;
+    color: #222;
+    margin: 0;
+    padding: 24px;
+  }
+  h1 {
+    color: #142d5f;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .subtitle {
+    text-align: center;
+    color: #555;
+    margin-bottom: 32px;
+    font-size: 15px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+    gap: 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    padding: 20px;
+    border: 1px solid #dcdfe6;
+  }
+  .card h2 {
+    font-size: 17px;
+    color: #142d5f;
+    margin-top: 0;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #eef2f7;
+    padding-bottom: 8px;
+  }
+  .desc {
+    font-size: 13px;
+    color: #444;
+    line-height: 1.5;
+    margin-top: 12px;
+  }
+  svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: #fafbfc;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+  }
+</style>
+</head>
+<body>
+
+<h1>MoonLake Report Primitive Illustrations</h1>
+<div class="subtitle">Interactive Vector Graphic Previews (matching LaTeX TikZ Palette: <code>#142d5f</code>, <code>#b41428</code>, <code>#226e2d</code>, <code>#008080</code>)</div>
+
+<div class="grid">
+
+  <!-- 1. Unit Cube & Plane -->
+  <div class="card">
+    <h2>1. Unit Cube &amp; Plane (Horizontal XZ / Vertical XY)</h2>
+    <svg viewBox="0 0 500 240">
+      <!-- Cube Left Scope -->
+      <g transform="translate(10, 0)">
+        <!-- Axes -->
+        <line x1="120" y1="120" x2="220" y2="120" stroke="#888" stroke-width="1.5" marker-end="url(#arrow-gray)" />
+        <text x="225" y="123" font-size="11" fill="#666">+X</text>
+        <line x1="120" y1="120" x2="120" y2="25" stroke="#888" stroke-width="1.5" marker-end="url(#arrow-gray)" />
+        <text x="116" y="20" font-size="11" fill="#666">+Y</text>
+        <line x1="120" y1="120" x2="50" y2="165" stroke="#888" stroke-width="1.5" marker-end="url(#arrow-gray)" />
+        <text x="36" y="175" font-size="11" fill="#666">+Z</text>
+
+        <!-- Cube faces -->
+        <!-- Top Face -->
+        <polygon points="65,65 140,65 180,35 105,35" fill="rgba(20,45,95,0.12)" stroke="#142d5f" stroke-width="2"/>
+        <!-- Front Face -->
+        <polygon points="65,65 140,65 140,140 65,140" fill="rgba(20,45,95,0.06)" stroke="#142d5f" stroke-width="2"/>
+        <!-- Right Face -->
+        <polygon points="140,65 180,35 180,110 140,140" fill="rgba(20,45,95,0.22)" stroke="#142d5f" stroke-width="2"/>
+
+        <!-- Normals -->
+        <line x1="122" y1="50" x2="122" y2="8" stroke="#b41428" stroke-width="2.5" marker-end="url(#arrow-red)"/>
+        <text x="128" y="16" font-size="11" fill="#b41428" font-weight="bold">n_top(0,1,0)</text>
+
+        <line x1="102" y1="102" x2="60" y2="132" stroke="#b41428" stroke-width="2.5" marker-end="url(#arrow-red)"/>
+        <text x="10" y="145" font-size="11" fill="#b41428" font-weight="bold">n_front(0,0,1)</text>
+
+        <line x1="160" y1="87" x2="215" y2="87" stroke="#b41428" stroke-width="2.5" marker-end="url(#arrow-red)"/>
+        <text x="180" y="103" font-size="11" fill="#b41428" font-weight="bold">n_right(1,0,0)</text>
+
+        <rect x="35" y="200" width="170" height="24" rx="4" fill="#fff" stroke="#ccc"/>
+        <text x="120" y="216" font-size="11" fill="#142d5f" font-weight="bold" text-anchor="middle">Unit Cube: 6 Outward Normals</text>
+      </g>
+
+      <!-- Plane Right Scope -->
+      <g transform="translate(260, 0)">
+        <!-- Horizontal Plane -->
+        <polygon points="30,120 130,120 170,80 70,80" fill="rgba(34,110,45,0.18)" stroke="#226e2d" stroke-width="2"/>
+        <line x1="100" y1="100" x2="100" y2="40" stroke="#226e2d" stroke-width="2.5" marker-end="url(#arrow-green)"/>
+        <text x="106" y="50" font-size="11" fill="#226e2d" font-weight="bold">Floor n=(0,1,0)</text>
+        <text x="110" y="115" font-size="10" fill="#226e2d">XZ Plane</text>
+
+        <!-- Vertical Plane -->
+        <polygon points="120,40 180,40 180,130 120,130" fill="rgba(0,128,128,0.2)" stroke="#008080" stroke-width="2"/>
+        <line x1="150" y1="85" x2="195" y2="115" stroke="#b41428" stroke-width="2.5" marker-end="url(#arrow-red)"/>
+        <text x="135" y="145" font-size="11" fill="#b41428" font-weight="bold">Wall n=(0,0,1)</text>
+
+        <rect x="30" y="200" width="180" height="24" rx="4" fill="#fff" stroke="#ccc"/>
+        <text x="120" y="216" font-size="11" fill="#142d5f" font-weight="bold" text-anchor="middle">Plane: Horizontal vs Vertical</text>
+      </g>
+    </svg>
+    <div class="desc">Shows the 6 distinct orthogonal normals on the unit cube and the two canonical plane orientations.</div>
+  </div>
+
+  <!-- 2. Square Pyramid & Triangular Prism -->
+  <div class="card">
+    <h2>2. Square Pyramid &amp; Triangular Prism (Gable Roof)</h2>
+    <svg viewBox="0 0 500 240">
+      <!-- Pyramid Left Scope -->
+      <g transform="translate(10, 0)">
+        <!-- Base outline -->
+        <polygon points="30,150 140,150 180,105 70,105" fill="rgba(180,195,215,0.2)" stroke="#888" stroke-dasharray="3,3"/>
+        <!-- Sloped faces -->
+        <polygon points="30,150 140,150 105,40" fill="rgba(20,45,95,0.18)" stroke="#142d5f" stroke-width="2"/>
+        <polygon points="140,150 180,105 105,40" fill="rgba(20,45,95,0.32)" stroke="#142d5f" stroke-width="2"/>
+
+        <!-- Apex point -->
+        <circle cx="105" cy="40" r="4" fill="#b41428"/>
+        <text x="112" y="38" font-size="11" fill="#b41428" font-weight="bold">Apex (0, 0.8, 0)</text>
+
+        <!-- Vectors -->
+        <line x1="30" y1="150" x2="140" y2="150" stroke="#226e2d" stroke-width="2" marker-end="url(#arrow-green)"/>
+        <text x="75" y="165" font-size="10" fill="#226e2d">e1 = v1 - v0</text>
+        <line x1="30" y1="150" x2="100" y2="45" stroke="#226e2d" stroke-width="2" marker-end="url(#arrow-green)"/>
+        <text x="35" y="95" font-size="10" fill="#226e2d">e2 = a - v0</text>
+
+        <!-- Normal -->
+        <line x1="91" y1="113" x2="91" y2="60" stroke="#b41428" stroke-width="2.5" marker-end="url(#arrow-red)"/>
+        <text x="96" y="75" font-size="10" fill="#b41428" font-weight="bold">n = (e1 x e2)/||...||</text>
+
+        <rect x="25" y="200" width="180" height="24" rx="4" fill="#fff" stroke="#ccc"/>
+        <text x="115" y="216" font-size="11" fill="#142d5f" font-weight="bold" text-anchor="middle">Pyramid: Sloped Facet Normal</text>
+      </g>
+
+      <!-- Gable Roof Right Scope -->
+      <g transform="translate(250, 0)">
+        <!-- Gable Base & Slope -->
+        <polygon points="35,150 115,150 75,70" fill="rgba(20,45,95,0.18)" stroke="#142d5f" stroke-width="2"/>
+        <polygon points="75,70 175,40 215,120 115,150" fill="rgba(210,130,20,0.3)" stroke="#142d5f" stroke-width="2"/>
+        <polygon points="75,70 175,40 135,40 35,70" fill="rgba(210,130,20,0.15)"/>
+
+        <!-- Ridge line -->
+        <line x1="75" y1="70" x2="175" y2="40" stroke="#226e2d" stroke-width="2.5"/>
+        <text x="105" y="50" font-size="10" fill="#226e2d" font-weight="bold">Ridge (0, 1, z)</text>
+
+        <!-- Normals -->
+        <line x1="145" y1="95" x2="195" y2="80" stroke="#b41428" stroke-width="2.5" marker-end="url(#arrow-red)"/>
+        <text x="150" y="115" font-size="10" fill="#b41428" font-weight="bold">n_right=(2/√5, 1/√5, 0)</text>
+
+        <line x1="60" y1="80" x2="10" y2="65" stroke="#b41428" stroke-width="2.5" marker-end="url(#arrow-red)"/>
+        <text x="2" y="58" font-size="9" fill="#b41428" font-weight="bold">n_left</text>
+
+        <rect x="35" y="200" width="180" height="24" rx="4" fill="#fff" stroke="#ccc"/>
+        <text x="125" y="216" font-size="11" fill="#142d5f" font-weight="bold" text-anchor="middle">Prism: Ridge &amp; Roof Normals</text>
+      </g>
+    </svg>
+    <div class="desc">Illustrates apex positioning, edge cross-product normal derivation, ridge line, and slope roof normals.</div>
+  </div>
+
+  <!-- 3. Procedural Rock & Tapered Branch -->
+  <div class="card">
+    <h2>3. Procedural Boulder &amp; Tapered Branch</h2>
+    <svg viewBox="0 0 500 240">
+      <!-- Rock Scope -->
+      <g transform="translate(10, 0)">
+        <polygon points="110,35 155,75 170,110 110,180" fill="rgba(50,50,50,0.2)" stroke="#333" stroke-width="1.5"/>
+        <polygon points="110,35 170,110 135,145 110,180" fill="rgba(50,50,50,0.3)" stroke="#333" stroke-width="1.5"/>
+        <polygon points="110,35 135,145 75,135 110,180" fill="rgba(50,50,50,0.15)" stroke="#333" stroke-width="1.5"/>
+        <polygon points="110,35 75,135 45,95 110,180" fill="rgba(50,50,50,0.25)" stroke="#333" stroke-width="1.5"/>
+        <polygon points="110,35 45,95 80,65 110,180" fill="rgba(50,50,50,0.12)" stroke="#333" stroke-width="1.5"/>
+
+        <circle cx="110" cy="35" r="3.5" fill="#b41428"/>
+        <text x="116" y="32" font-size="10" fill="#b41428">(0, 0.75r, 0)</text>
+
+        <circle cx="110" cy="180" r="3.5" fill="#b41428"/>
+        <text x="116" y="192" font-size="10" fill="#b41428">(0, -0.35r, 0)</text>
+
+        <line x1="110" y1="105" x2="170" y2="110" stroke="#226e2d" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+        <text x="125" y="102" font-size="9" fill="#226e2d" font-weight="bold">ri(θi) jitter</text>
+
+        <rect x="25" y="200" width="180" height="24" rx="4" fill="#fff" stroke="#ccc"/>
+        <text x="115" y="216" font-size="11" fill="#142d5f" font-weight="bold" text-anchor="middle">Rock: 6-Sided Bipyramid</text>
+      </g>
+
+      <!-- Tapered Branch Scope -->
+      <g transform="translate(260, 0)">
+        <!-- Base ellipse -->
+        <ellipse cx="110" cy="160" rx="60" ry="16" fill="rgba(20,45,95,0.1)" stroke="#142d5f" stroke-width="2"/>
+        <!-- Tip ellipse -->
+        <ellipse cx="110" cy="50" rx="39" ry="10" fill="rgba(20,45,95,0.2)" stroke="#142d5f" stroke-width="2"/>
+
+        <!-- Tapered sides -->
+        <line x1="50" y1="160" x2="71" y2="50" stroke="#142d5f" stroke-width="2"/>
+        <line x1="170" y1="160" x2="149" y2="50" stroke="#142d5f" stroke-width="2"/>
+        <line x1="85" y1="173" x2="94" y2="58" stroke="#142d5f" stroke-width="1.5" stroke-dasharray="2,2"/>
+        <line x1="135" y1="173" x2="126" y2="58" stroke="#142d5f" stroke-width="1.5" stroke-dasharray="2,2"/>
+
+        <line x1="110" y1="160" x2="170" y2="160" stroke="#226e2d" stroke-width="2"/>
+        <text x="125" y="155" font-size="10" fill="#226e2d" font-weight="bold">Base r1</text>
+
+        <line x1="110" y1="50" x2="149" y2="50" stroke="#226e2d" stroke-width="2"/>
+        <text x="120" y="45" font-size="10" fill="#226e2d" font-weight="bold">r2 = 0.65 r1</text>
+
+        <line x1="160" y1="105" x2="205" y2="95" stroke="#b41428" stroke-width="2.5" marker-end="url(#arrow-red)"/>
+        <text x="168" y="125" font-size="10" fill="#b41428" font-weight="bold">n_side</text>
+
+        <rect x="25" y="200" width="180" height="24" rx="4" fill="#fff" stroke="#ccc"/>
+        <text x="115" y="216" font-size="11" fill="#142d5f" font-weight="bold" text-anchor="middle">Branch: 5-Sided Frustum</text>
+      </g>
+    </svg>
+    <div class="desc">Details sinusoidal perturbation of equatorial vertices and tapering angle of wood branches.</div>
+  </div>
+
+  <!-- 4. Grass Tuft & Glow Billboard Quad -->
+  <div class="card">
+    <h2>4. Grass Tuft &amp; Glow Billboard Quad</h2>
+    <svg viewBox="0 0 500 240">
+      <!-- Grass Scope -->
+      <g transform="translate(10, 0)">
+        <ellipse cx="110" cy="160" rx="65" ry="18" fill="none" stroke="#bbb" stroke-dasharray="3,3"/>
+
+        <!-- 4 crossed blade planes -->
+        <polygon points="45,160 110,40 175,160" fill="rgba(34,110,45,0.3)" stroke="#226e2d" stroke-width="1.5"/>
+        <polygon points="65,172 115,35 155,148" fill="rgba(34,110,45,0.4)" stroke="#226e2d" stroke-width="1.5"/>
+        <polygon points="110,178 110,30 110,142" fill="none" stroke="#226e2d" stroke-width="2"/>
+        <polygon points="155,172 105,45 65,148" fill="rgba(34,110,45,0.25)" stroke="#226e2d" stroke-width="1.5"/>
+
+        <!-- Winding annotations -->
+        <path d="M 85 110 A 15 15 0 0 1 105 110" fill="none" stroke="#b41428" stroke-width="2" marker-end="url(#arrow-red)"/>
+        <text x="75" y="105" font-size="9" fill="#b41428" font-weight="bold">CCW</text>
+        <path d="M 135 110 A 15 15 0 0 1 115 110" fill="none" stroke="#d28214" stroke-width="2" marker-end="url(#arrow-amber)"/>
+        <text x="135" y="105" font-size="9" fill="#d28214" font-weight="bold">CW</text>
+
+        <text x="110" y="22" font-size="10" fill="#226e2d" text-anchor="middle" font-weight="bold">Tips at y=h (Δθ = 45°)</text>
+
+        <rect x="25" y="200" width="180" height="24" rx="4" fill="#fff" stroke="#ccc"/>
+        <text x="115" y="216" font-size="11" fill="#142d5f" font-weight="bold" text-anchor="middle">Grass: Double-Sided Winding</text>
+      </g>
+
+      <!-- Glow Billboard Scope -->
+      <g transform="translate(260, 0)">
+        <rect x="40" y="25" width="150" height="150" fill="#fff" stroke="#142d5f" stroke-width="2"/>
+
+        <!-- Concentric glow circles -->
+        <circle cx="115" cy="100" r="65" fill="rgba(218,165,32,0.1)"/>
+        <circle cx="115" cy="100" r="48" fill="rgba(218,165,32,0.22)"/>
+        <circle cx="115" cy="100" r="32" fill="rgba(218,165,32,0.45)"/>
+        <circle cx="115" cy="100" r="16" fill="rgba(218,165,32,0.75)"/>
+        <circle cx="115" cy="100" r="5" fill="#fff"/>
+
+        <!-- Axes -->
+        <line x1="115" y1="100" x2="185" y2="100" stroke="#555" stroke-width="1.5" marker-end="url(#arrow-gray)"/>
+        <text x="175" y="113" font-size="10" fill="#555">u ∈ [-1, 1]</text>
+        <line x1="115" y1="100" x2="115" y2="30" stroke="#555" stroke-width="1.5" marker-end="url(#arrow-gray)"/>
+        <text x="120" y="38" font-size="10" fill="#555">v ∈ [-1, 1]</text>
+
+        <!-- Distance arrow -->
+        <line x1="115" y1="100" x2="150" y2="65" stroke="#b41428" stroke-width="2" marker-end="url(#arrow-red)"/>
+        <text x="135" y="78" font-size="9" fill="#b41428" font-weight="bold">d = √(u²+v²)</text>
+
+        <rect x="65" y="125" width="100" height="20" rx="3" fill="#fff" stroke="#b41428"/>
+        <text x="115" y="139" font-size="10" fill="#b41428" text-anchor="middle" font-weight="bold">α(d) = exp(-4d)</text>
+
+        <rect x="25" y="200" width="180" height="24" rx="4" fill="#fff" stroke="#ccc"/>
+        <text x="115" y="216" font-size="11" fill="#142d5f" font-weight="bold" text-anchor="middle">Billboard: Soft Radial Glow</text>
+      </g>
+    </svg>
+    <div class="desc">Shows counter-clockwise and clockwise indexing for omnidirectional visibility, and radial falloff for billboard glows.</div>
+  </div>
+
+</div>
+
+<!-- SVG Marker Definitions -->
+<svg style="position: absolute; width: 0; height: 0;" aria-hidden="true">
+  <defs>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#b41428"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#226e2d"/>
+    </marker>
+    <marker id="arrow-gray" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#666"/>
+    </marker>
+    <marker id="arrow-amber" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#d28214"/>
+    </marker>
+  </defs>
+</svg>
+
+</body>
+</html>
